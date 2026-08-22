@@ -13,6 +13,7 @@ app.use(
   session({
     store: new pgSession({
       conString: process.env.DATABASE_URL,
+      createTableIfMissing: true,
     }),
     secret: "volunteer-app-secret",
     resave: false,
