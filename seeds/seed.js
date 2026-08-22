@@ -27,7 +27,4 @@ const seedDatabase = async () => {
     password: hashedPassword,
   });
 
-  process.exit(0);
-};
-
 seedDatabase();
