@@ -9,7 +9,7 @@ const signupData = require("./signupData.json");
 const bcrypt = require("bcrypt");
 
 const seedDatabase = async () => {
-  await sequelize.sync({ force: true });
+  await sequelize.sync();
   for (const opportunity of opportunityData) {
     await VolunteerOpportunity.findOrCreate({
       where: {
@@ -19,6 +19,16 @@ const seedDatabase = async () => {
       defaults: opportunity,
     });
   }
+
+  for (const signup of signupData) {
+  await VolunteerSignup.findOrCreate({
+    where: {
+      email: signup.email,
+      opportunity_id: signup.opportunity_id,
+    },
+    defaults: signup,
+  });
+}
 
   const hashedPassword = await bcrypt.hash("admin123", 10);
 
