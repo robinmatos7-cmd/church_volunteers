@@ -26,5 +26,6 @@ const seedDatabase = async () => {
     email: "admin@example.com",
     password: hashedPassword,
   });
+};
 
 seedDatabase();
