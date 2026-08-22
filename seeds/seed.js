@@ -10,15 +10,16 @@ const bcrypt = require("bcrypt");
 
 const seedDatabase = async () => {
   await sequelize.sync();
-  const opportunityCount = await VolunteerOpportunity.count();
-  if (opportunityCount > 0) {
-  return;
-}
 
-  await VolunteerOpportunity.bulkCreate(opportunityData, {
-    individualHooks: true,
-    returning: true,
+  for (const opportunity of opportunityData) {
+  await VolunteerOpportunity.findOrCreate({
+    where: {
+      role: opportunity.role,
+      date: opportunity.date,
+    },
+    defaults: opportunity,
   });
+}
 
   await VolunteerSignup.bulkCreate(signupData, {
     returning: true,
