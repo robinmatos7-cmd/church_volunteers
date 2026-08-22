@@ -1,6 +1,7 @@
 const path = require("path");
 const express = require("express");
 const session = require("express-session");
+const pgSession = require("connect-pg-simple")(session);
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
 const helpers = require("./utils/helpers");
@@ -10,6 +11,9 @@ const seedDatabase = require("./seeds/seed");
 const app = express();
 app.use(
   session({
+    store: new pgSession({
+      conString: process.env.DATABASE_URL,
+    }),
     secret: "volunteer-app-secret",
     resave: false,
     saveUninitialized: false,
