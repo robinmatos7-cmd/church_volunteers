@@ -32,6 +32,4 @@ const seedDatabase = async () => {
   });
 };
 
-seedDatabase().catch((err) => {
-  console.error(err);
-});
+module.exports = seedDatabase;
