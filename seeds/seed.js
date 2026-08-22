@@ -21,16 +21,16 @@ const seedDatabase = async () => {
   });
 }
 
-  await VolunteerSignup.bulkCreate(signupData, {
-    returning: true,
-  });
-
   const hashedPassword = await bcrypt.hash("admin123", 10);
 
-  await User.create({
+  await User.findOrCreate({
+  where: {
     email: "admin@example.com",
+  },
+  defaults: {
     password: hashedPassword,
-  });
+  },
+});
 };
 
 module.exports = seedDatabase;
