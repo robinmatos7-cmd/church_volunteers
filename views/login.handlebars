@@ -1,0 +1,44 @@
+<section class="page-header">
+    <div>
+        <h2 class="page-title">Admin Login</h2>
+        <p class="page-subtitle">
+            Sign in to manage volunteer opportunities
+        </p>
+    </div>
+</section>
+{{#if error}}
+<div class="card">
+    <p class="error-message">{{error}}</p>
+</div>
+{{/if}}
+<section class="card">
+    <div class="card__header">
+        <h3 class="card__title">Sign In</h3>
+    </div>
+
+    <form action="/login" method="POST">
+
+        <div>
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+            >
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                required
+            >
+        </div>
+
+        <button type="submit">Sign In</button>
+
+    </form>
+</section>

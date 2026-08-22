@@ -1,0 +1,44 @@
+[
+    {
+        "role": "Usher",
+        "details":"Open/close and hold doors. Guide people to their seats. Help the elderly and children.",
+        "date":"2026-08-29",
+        "start_time":"9:30:00",
+        "end_time":"11:45:00"
+    },
+    {
+        "role": "Children Sunday School Teacher",
+        "details":"Study and deliver assigned lesson to children ages 5 to 7.",
+        "date":"2026-08-22",
+        "start_time":"10:30:00",
+        "end_time":"11:20:00"
+    },
+    {
+        "role": "Media and Production Team",
+        "details":"Assist console/camera operators as needed. Arrive at least one hour early for briefing.",
+        "date":"2026-09-05",
+        "start_time":"9:00:00",
+        "end_time":"11:45:00"
+    },
+    {
+        "role": "Parking Lot Staff",
+        "details":"Guide attendees as they arrive to park in an appropiate spot in a timely manner so as to not obstruct any emergency exits. Guide attendees as the exit church campus. Arrive 30mins early for briefing.",
+        "date":"2026-09-12",
+        "start_time":"9:00:00",
+        "end_time":"12:00:00"
+    },
+    {
+        "role": "Pre-service and Post-service accomodations",
+        "details":"Assist staff getting the auditorium ready for service. Assist staff leaving the auditorium neatly organized after service.",
+        "date":"2026-08-29",
+        "start_time":"9:00:00",
+        "end_time":"12:30:00"
+    },
+    {
+       "role": "Connection Center Greeters",
+        "details":"Greet and answer questions as visitors come to the booth. Make sure first time visitors get a book/mug or other gift.",
+        "date":"2026-08-22",
+        "start_time":"11:20:00",
+        "end_time":"12:30:00" 
+    }
+]

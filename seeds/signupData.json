@@ -1,0 +1,37 @@
+[
+    {
+        "first_name": "Raúl",
+        "last_name": "González",
+        "phone": "809-555-0001",
+        "email": "rg09@kmail.com",
+        "opportunity_id": 1
+    },
+    {
+        "first_name": "María",
+        "last_name": "De Los Santos",
+        "phone": "829-455-2592",
+        "email": "md_ls85@kmail.com",
+        "opportunity_id": 3
+    },
+    {
+        "first_name": "Pepe",
+        "last_name": "Ramírez",
+        "phone": "849-704-0818",
+        "email": "p.ramirez@kmail.com",
+        "opportunity_id": 5
+    },
+    {
+        "first_name": "Jean",
+        "last_name": "Smith",
+        "phone": "809-654-5889",
+        "email": "jeanjeanjean@notmail.com",
+        "opportunity_id": 2
+    },
+    {
+         "first_name": "Carolina",
+        "last_name": "Maliacchi",
+        "phone": "829-700-0007",
+        "email": "cmaliacchi@privatemail.com",
+        "opportunity_id": 4
+    }
+]

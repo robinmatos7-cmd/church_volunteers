@@ -1,0 +1,79 @@
+<section class="page-header">
+    <div>
+        <h2 class="page-title">Volunteer Management</h2>
+        <p class="page-subtitle">
+            Manage volunteers for each opportunity
+        </p>
+    </div>
+    <a href="/logout" class="btn">Log Out</a>
+</section>
+
+{{#each opportunities}}
+<section class="card">
+
+    <div class="card__header">
+        <h3 class="card__title">
+            {{role}}
+        </h3>
+
+        <span class="badge">
+            {{volunteer_signups.length}} Volunteers
+        </span>
+    </div>
+
+    <div class="list">
+
+        {{#if volunteer_signups}}
+
+        {{#each volunteer_signups}}
+
+        <div class="list__row">
+
+            <div class="list__left">
+
+                <div class="emoji">
+                    👤
+                </div>
+
+                <div>
+                    <div class="list__title">
+                        {{first_name}} {{last_name}}
+                    </div>
+
+                    <div class="list__meta">
+                        <span>{{phone}}</span>
+                        <span>•</span>
+                        <span>{{email}}</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <form action="/manage/volunteer/{{id}}/delete" method="POST">
+                <button type="submit" class="btn btn--danger"
+                    onclick="return confirm('Are you sure you want to remove this volunteer?');">
+                    Remove
+                </button>
+            </form>
+
+        </div>
+
+        {{/each}}
+
+        {{else}}
+
+        <div class="list__row">
+            <span class="muted">
+                No volunteers have signed up yet.
+            </span>
+        </div>
+
+        {{/if}}
+
+    </div>
+</section>
+{{/each}}
+
+<a href="/" class="btn">
+    ← Back to Opportunities
+</a>

@@ -1,0 +1,47 @@
+<section class="page-header">
+  <div>
+    <h2 class="page-title">Church Volunteer Opportunities</h2>
+    <p class="page-subtitle">
+      Find an opportunity to serve your church.
+    </p>
+  </div>
+</section>
+
+<section class="card">
+  <div class="card__header">
+    <h3 class="card__title">Volunteer Opportunities</h3>
+    <span class="badge">{{opportunities.length}} total</span>
+  </div>
+
+  <div class="list">
+    {{#each opportunities as |opportunity|}}
+    <div class="list__row">
+      <div class="list__left">
+        <span class="emoji" aria-hidden="true">{{{get_emoji opportunity.role}}}</span>
+
+        <div>
+          <a href="/opportunity/{{opportunity.id}}" class="list__title">
+            {{opportunity.role}}
+          </a>
+
+          <div class="list__meta">
+            <span class="muted">Volunteer Opportunity</span>
+            <span class="muted">•</span>
+            <span class="muted">
+              {{opportunity.volunteer_signups.length}} volunteers
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="list__right">
+        <div> {{opportunity.details}}</div>
+        <div class="muted">{{format_date opportunity.date}}</div>
+        <div class="muted">
+          {{opportunity.start_time}} - {{opportunity.end_time}}
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</section>
