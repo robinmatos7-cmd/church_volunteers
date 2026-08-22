@@ -2,7 +2,7 @@ const VolunteerOpportunity = require("./VolunteerOpportunity");
 
 const VolunteerSignup = require("./VolunteerSignup");
 
-const User = require("./User");
+const User = require("./user");
 
 VolunteerOpportunity.hasMany(VolunteerSignup, {
   foreignKey: "opportunity_id",
