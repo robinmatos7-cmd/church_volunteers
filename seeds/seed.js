@@ -9,7 +9,7 @@ const signupData = require("./signupData.json");
 const bcrypt = require("bcrypt");
 
 const seedDatabase = async () => {
-  await sequelize.sync({ force: true });
+  await sequelize.sync();
 
   await VolunteerOpportunity.bulkCreate(opportunityData, {
     individualHooks: true,
