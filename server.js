@@ -5,6 +5,7 @@ const pgSession = require("connect-pg-simple")(session);
 const exphbs = require("express-handlebars");
 const routes = require("./controllers");
 const helpers = require("./utils/helpers");
+console.log("format_time:", typeof helpers.format_time);
 const sequelize = require("./config/connection");
 const seedDatabase = require("./seeds/seed");
 

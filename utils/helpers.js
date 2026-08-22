@@ -18,6 +18,17 @@ module.exports = {
   },
 
   format_date: (date) => {
-    return date.toString().slice(0, 10);
+    return new Date(date).toLocaleDateString("en-US", {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+    });
+  },
+
+  format_time: (time) => {
+    return new Date(`1970-01-01T${time}`).toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "2-digit",
+    });
   },
 };
