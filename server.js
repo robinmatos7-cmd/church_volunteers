@@ -5,6 +5,7 @@ const exphbs = require("express-handlebars");
 const routes = require("./controllers");
 const helpers = require("./utils/helpers");
 const sequelize = require("./config/connection");
+const seedDatabase = require("./seeds/seed");
 
 const app = express();
 app.use(
@@ -27,7 +28,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: false }).then(async () => {
+  await seedDatabase();
+
   app.listen(PORT, () =>
     console.log(`🌐 Server listening on http://localhost:${PORT}`),
   );
