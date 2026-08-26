@@ -57,19 +57,19 @@ Volunteer opportunities contain information such as the role, description, date,
 
 ### Homepage
 
-![Church Volunteers Homepage](Screenshots\homepage.png)
+![Church Volunteers Homepage](Screenshots/homepage.png)
 
 ### Admin Login
 
-![Admin Login](Screenshots\admin-login.png)
+![Admin Login](Screenshots/admin-login.png)
 
 ### Volunteer Management
 
-![Volunteer Management](Screenshots\volunteer-management.png)
+![Volunteer Management](Screenshots/volunteer-management.png)
 
 ### Dark Mode
 
-![Homepage Dark Mode](Screenshots\Dark-mode.png)
+![Homepage Dark Mode](Screenshots/Dark-mode.png)
 
 ## Future Development
 
