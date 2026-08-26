@@ -5,7 +5,6 @@ const { VolunteerOpportunity, VolunteerSignup, User } = require("../models");
 const opportunityData = require("./opportunityData.json");
 
 const signupData = require("./signupData.json");
-
 const bcrypt = require("bcrypt");
 
 const seedDatabase = async () => {
@@ -14,21 +13,20 @@ const seedDatabase = async () => {
     await VolunteerOpportunity.findOrCreate({
       where: {
         role: opportunity.role,
-        date: opportunity.date,
       },
       defaults: opportunity,
     });
   }
 
   for (const signup of signupData) {
-  await VolunteerSignup.findOrCreate({
-    where: {
-      email: signup.email,
-      opportunity_id: signup.opportunity_id,
-    },
-    defaults: signup,
-  });
-}
+    await VolunteerSignup.findOrCreate({
+      where: {
+        email: signup.email,
+        opportunity_id: signup.opportunity_id,
+      },
+      defaults: signup,
+    });
+  }
 
   const hashedPassword = await bcrypt.hash("admin123", 10);
 
